@@ -33,8 +33,8 @@ def find_hotels(city, country, state):
 	method = "list"
 	other_elements = "&cid=496231&customerIpAddress=50.148.140.1&customerUserAgent=OSX10.9.5&customerSessionId=123456&minorRev=30&locale=en_US&currencyCode=USD"
 	response_type = "json"
-	API_KEY = "###############"
-	API_secret= "##############"
+	API_KEY = "38avjqisnk3bojml2onh4cjmpl"
+	API_secret= "aojt8r55kqcec"
 	hash = md5.new()
 	timestamp = str(int(time.time()))
 	signature = md5.new(API_KEY + API_secret + timestamp).hexdigest()
@@ -57,7 +57,7 @@ def find_hotels(city, country, state):
 
 
 # #Introduction of your questionnaire
-name = raw_input('What is your name?')
+name = raw_input('What is your name? ')
 
 start_question = raw_input('%s, are you ready to find out where your next vacation destination should be?' %(name))
 
@@ -71,7 +71,7 @@ else:
 	exit()
 
 
-first_question = raw_input('\n\nWould you like your next vacation destination to be in the US, Asia, or Europe? Choose one.')
+first_question = raw_input('\n\nWould you like your next vacation destination to be in the US, Asia, or Europe? Choose one. ')
 
 def travel_response(first_question):
 	if first_question == 'US' or first_question == ' US': 
@@ -81,16 +81,16 @@ def travel_response(first_question):
 
 		dom_response_list = []
 
-		first_dom_question = raw_input('Choose your preference - farm-fresh food or pizza?')
+		first_dom_question = raw_input('\nChoose your preference - farm-fresh food or pizza? ')
 		dom_response_list.append(first_dom_question)
 		
-		second_dom_question = raw_input('What would you find more exhilarating - bridges or tall buildings?')
-		dom_response_list.append(second_dom_question)
+		second_dom_question = raw_input('What would you find more exhilarating - bridges or tall buildings? ')
+		dom_response_list.append(second_dom_question) 
 		
-		third_dom_question = raw_input('What would you prefer to do on a Saturday evening - watch a musical or go to an aquarium?')
+		third_dom_question = raw_input('What would you prefer to do on a Saturday evening - watch a musical or go to an aquarium? ')
 		dom_response_list.append(third_dom_question)
 		
-		fourth_dom_question = raw_input('Lastly, do you prefer smaller cities or larger cities?')
+		fourth_dom_question = raw_input('Lastly, do you prefer smaller cities or larger cities? ')
 		dom_response_list.append(fourth_dom_question)
 	
 		sf_counter = 0
@@ -103,11 +103,11 @@ def travel_response(first_question):
 				nyc_counter += 1
 
 		if sf_counter > nyc_counter: 
-			print "You should go to San Francisco!\nHere are a list of attractions you may be interested in: " + ', '.join(SF.attributes)
+			print "\nYou should go to San Francisco!\nHere are a list of attractions you may be interested in: " + ', '.join(SF.attributes)
 			hotels = find_hotels("San%20Francisco","US","California")
 			return hotels 
 		else: 
-			print "You should go to New York City!\nHere are a list of attractions you may be interested in: " + ', '.join(NYC.attributes)
+			print "\nYou should go to New York City!\nHere are a list of attractions you may be interested in: " + ', '.join(NYC.attributes)
 			hotels = find_hotels("New%20York%20City","US","New%20York")
 			return hotels 
 
@@ -121,13 +121,13 @@ def travel_response(first_question):
 		tp_counter = 0
 		tokyo_counter = 0
 
-		first_asia_question = raw_input('Choose your preference - sushi or fried chicken?')
+		first_asia_question = raw_input('\nChoose your preference - sushi or fried chicken? ')
 		asia_response_list.append(first_asia_question)
 
-		second_asia_question = raw_input('Do you tend to spend your money on fashion or food?')
+		second_asia_question = raw_input('Do you tend to spend your money on fashion or food? ')
 		asia_response_list.append(second_asia_question)
 
-		third_asia_question = raw_input('Would you prefer to go to a flower garden or go on a hike?')
+		third_asia_question = raw_input('Would you prefer to go to a flower garden or go on a hike? ')
 		asia_response_list.append(third_asia_question)
 
 		for responses in asia_response_list: 
@@ -137,11 +137,11 @@ def travel_response(first_question):
 				tokyo_counter += 1
 
 		if tp_counter > tokyo_counter:
-			print "You should go to Taipei!\nHere are a list of attractions you may be interested in: " + ', '.join(TPE.attributes)
+			print "\nYou should go to Taipei!\nHere are a list of attractions you may be interested in: " + ', '.join(TPE.attributes)
 			hotels = find_hotels("Taipei","TW",None)
 			return hotels 
 		else: 
-			print "You should go to Tokyo!\nHere are a list of attractions you may be interested in: " + ', '.join(T.attributes)
+			print "\nYou should go to Tokyo!\nHere are a list of attractions you may be interested in: " + ', '.join(T.attributes)
 			hotels = find_hotels("Tokyo","JP",None)
 			return hotels
 
@@ -155,16 +155,16 @@ def travel_response(first_question):
 		paris_counter = 0
 		barce_counter = 0
 
-		first_euro_question = raw_input('Choose your preference - seafood or duck?')
+		first_euro_question = raw_input('Choose your preference - seafood or duck? ')
 		euro_response_list.append(first_euro_question)
 
-		second_euro_question = raw_input('What would you find more interesting - classic art or gothic architecture?')
+		second_euro_question = raw_input('What would you find more interesting - classic art or gothic architecture? ')
 		euro_response_list.append(second_euro_question)
 
-		third_euro_quesion = raw_input('What would you like to see more - a grand church or a palace?')
+		third_euro_quesion = raw_input('What would you like to see more - a grand church or a palace? ')
 		euro_response_list.append(third_euro_quesion)
 
-		fourth_euro_question = raw_input('Choose a dessert - chocolate or flan?')
+		fourth_euro_question = raw_input('Choose a dessert - chocolate or flan? ')
 		euro_response_list.append(fourth_euro_question)
 
 		for responses in euro_response_list: 
@@ -174,11 +174,11 @@ def travel_response(first_question):
 				barce_counter += 1
 
 		if paris_counter > barce_counter:
-			print "You should go to Paris!\nHere are a list of attractions you may be interested in: " + ', '.join(P.attributes) 
+			print "\nYou should go to Paris!\nHere are a list of attractions you may be interested in: " + ', '.join(P.attributes) 
 			hotels = find_hotels("Paris","France",None)
 			return hotels 
 		else: 
-			print "You should go to Barcelona!\nHere are a list of attractions you may be interested in: " + ', '.join(B.attributes)
+			print "\nYou should go to Barcelona!\nHere are a list of attractions you may be interested in: " + ', '.join(B.attributes)
 			hotels = find_hotels("Barcelona","Spain",None)
 			return hotels
 
