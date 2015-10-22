@@ -34,7 +34,7 @@ def find_hotels(city, country, state):
 	other_elements = "&cid=YOUR ACCOUNT NUMBER HERE&customerIpAddress=50.148.140.1&customerUserAgent=OSX10.9.5&customerSessionId=123456&minorRev=30&locale=en_US&currencyCode=USD"
 	response_type = "json"
 	API_KEY = "YOUR API KEY HERE"
-	API_secret= "YOUR API SECRETE HERE"
+	API_secret= "YOUR API SECRET HERE"
 	hash = md5.new()
 	timestamp = str(int(time.time()))
 	signature = md5.new(API_KEY + API_secret + timestamp).hexdigest()
