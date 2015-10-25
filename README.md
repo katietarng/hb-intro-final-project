@@ -1,9 +1,8 @@
-Vacation Destination Fun Questionnaire
-
+Vacation Destination Questionnaire
 
 What is the program? 
 ------------
-This is a Buzzfeed-style survey that outputs a user's next suggested vacation destination based on the answers to the questions in the survey. Once the user has gone through the entire flow of the survey and received their destination, the program will output 5 hotel suggestions provided by Expedia's API. 
+This is a Buzzfeed-style survey that outputs a user's next suggested vacation destination based on their answers to the questions in the survey. Once the user has gone through the flow of the survey and received their destination, the program will output five hotel suggestions provided by Expedia's API. The program is designed to be a fun interactive survey that may help those with wanderlust decide where to plan their next adventure. 
 
 Documentation
 -------------
@@ -18,7 +17,7 @@ Have a text editor installed and readily available as you will need to change th
 
 Troubleshooting
 ---------------
-Expedia's API requires a proper HMAC-MD5 hash in order for the request to work. The program already contains a method to hash the required parameters (API key, secret, account number). If the response outputs an error regarding an improper authentication, please use the link below to double check if the hash is working correctly and matches their system. 
+Expedia's API requires a proper HMAC-MD5 hash in order for the request to work. The program already contains a method to hash the required parameters. If the response outputs an error regarding an improper authentication, please use the link below to double check if the hash is working correctly and matches their system. 
 
 http://developer.ean.com/md5-hash-generator/
 
