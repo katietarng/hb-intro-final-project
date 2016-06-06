@@ -8,7 +8,7 @@ Documentation
 -------------
 This program does have Expedia's API URL hardcoded into the code. In order for the program to run properly, you will have to register/create an account to receive a customized API key, API secret, and account number which are required for the API. Links for the registration and API documentation are below.
 
-Expedia Affilate Network registration - https://www.ian.com/affiliate/signup/stepOne.jsp?addedBy=bdg
+Expedia Affilate Network registration - https://www.ian.com/affiliate/signup/stepOne.jsp?addedBy=bdg<br>
 Expedia Hotel List Documentation - http://developer.ean.com/docs/hotel-list
 
 Installation and Running the Application
