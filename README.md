@@ -1,4 +1,4 @@
-Vacation Destination Questionnaire
+Vacation Questionnaire
 
 What is the program? 
 ------------
